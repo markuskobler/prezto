@@ -11,9 +11,9 @@
 function prompt_markus_precmd {
   # Check for untracked files or updated submodules since vcs_info does not.
   if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-    branch_format="${_prompt_markus_colors[1]}%u%c${_prompt_markus_colors[4]}✗${_prompt_markus_colors[2]}%7.7i%f@${_prompt_markus_colors[3]}%b"
+    branch_format="${_prompt_markus_colors[4]}✗${_prompt_markus_colors[1]}%u%c${_prompt_markus_colors[6]}%b%f@${_prompt_markus_colors[7]}%7.7i"
   else
-    branch_format="${_prompt_markus_colors[1]}%u%c${_prompt_markus_colors[2]}%7.7i%f@${_prompt_markus_colors[3]}%b"
+    branch_format="${_prompt_markus_colors[1]}%u%c${_prompt_markus_colors[6]}%b%f@${_prompt_markus_colors[7]}%7.7i"
   fi
 
   zstyle ':vcs_info:*:prompt:*' formats "${branch_format}"
@@ -41,14 +41,20 @@ function prompt_markus_setup {
       "%F{135}" # Purple
       "%F{161}" # Hotpink
       "%F{118}" # Limegreen
+      "%F{27}"  # Blue
+      "%F{3}"   # Dirt
+      "%F{15}"  # White
     )
   else
     _prompt_markus_colors=(
       "%F{cyan}"
       "%F{yellow}"
       "%F{magenta}"
-      "%F{red}"
+      "%F{red}"  
       "%F{green}"
+      "%F{blue}"
+      "%F{green}"
+      "%F{white}"
     )
   fi
 
@@ -62,7 +68,7 @@ function prompt_markus_setup {
   local branch_format="(${_prompt_markus_colors[1]}%u%f%r@%b%c)"
   local action_format="(${_prompt_markus_colors[5]}%a%f)"
   local unstaged_format="${_prompt_markus_colors[2]}✗%f"
-  local staged_format="${_prompt_markus_colors[5]}⚡%f"
+  local staged_format="${_prompt_markus_colors[5]}⚡ %f"
   
   # Set vcs_info parameters.
   zstyle ':vcs_info:*' enable bzr git hg svn
@@ -77,7 +83,7 @@ function prompt_markus_setup {
   # zstyle ':prezto:module:git:info:commit' format ' %F{white}%.7c%f'
 
   # Define prompts.
-  PROMPT='${_prompt_markus_colors[5]}%n%f@${_prompt_markus_colors[2]}%B%M%b%f:%B%~%b
+  PROMPT='${_prompt_markus_colors[8]}%n@%B%M%b%f:%B%~%b
 %(!.#.∞) '
 
   RPROMPT='${vcs_info_msg_0_}'
