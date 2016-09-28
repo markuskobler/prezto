@@ -43,6 +43,8 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  ~/bin
+  ~/.cargo/bin
   /usr/local/{bin,sbin}
   $path
 )
@@ -72,3 +74,6 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+export DOCKER_HOST=tcp://192.168.64.7:2375
+
