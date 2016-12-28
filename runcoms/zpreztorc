@@ -34,6 +34,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'ruby' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'
@@ -103,7 +104,7 @@ zstyle ':prezto:module:prompt' theme 'markus'
 #
 
 # Auto switch the Ruby version on directory change.
-# zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
 #
 # Screen
@@ -167,6 +168,3 @@ zstyle ':prezto:module:prompt' theme 'markus'
 
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
-
-
-

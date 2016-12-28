@@ -119,3 +119,8 @@ then
   # Sets the tab and window titles before command execution.
   add-zsh-hook preexec _terminal-set-titles-with-command
 fi
+
+# Iterm2 integration
+if [[ -e "${HOME}/.iterm2_shell_integration.zsh" ]]; then
+    source "${HOME}/.iterm2_shell_integration.zsh"
+fi
