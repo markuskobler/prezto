@@ -13,3 +13,4 @@ fi
 # Customize to your needs...
 [[ -s "$HOME/.gpg-agent-info" ]] && source "$HOME/.gpg-agent-info"
 
+export N_PREFIX="$HOME/.n"
