@@ -32,8 +32,8 @@ zstyle ':prezto:load' pmodule \
   'editor' \
   'history' \
   'directory' \
-  'gpg' \
   'git' \
+  'ssh' \
   'spectrum' \
   'utility' \
   'completion' \
@@ -47,7 +47,8 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the query found color.
-# zstyle ':prezto:module:autosuggestions:color' found ''
+#zstyle ':prezto:module:autosuggestions:color' found ''
+#export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
 
 #
 # Completions
@@ -161,7 +162,7 @@ zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 #
 
 # Set the SSH identities to load into the agent.
-# zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_ed25519' 'id_github'
 
 #
 # Syntax Highlighting
@@ -208,10 +209,10 @@ zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 #
 
 # Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
