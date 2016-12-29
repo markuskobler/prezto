@@ -14,3 +14,4 @@ fi
 [[ -s "$HOME/.gpg-agent-info" ]] && source "$HOME/.gpg-agent-info"
 
 export N_PREFIX="$HOME/.n"
+# export DOCKER_HOST=tcp://192.168.64.7:2375
