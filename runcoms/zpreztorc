@@ -34,6 +34,7 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'git' \
   'ssh' \
+  'ocaml' \
   'spectrum' \
   'utility' \
   'completion' \
