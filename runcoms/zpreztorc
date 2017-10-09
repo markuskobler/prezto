@@ -33,6 +33,7 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'directory' \
   'git' \
+  'gpg' \
   'ssh' \
   'ocaml' \
   'spectrum' \
@@ -78,6 +79,8 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
+
+zstyle ':prezto:module:git:info' verbose 'yes'
 
 #
 # GNU Utility
@@ -163,7 +166,7 @@ zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 #
 
 # Set the SSH identities to load into the agent.
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_ed25519' 'id_github'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_ed25519' 'id_github' 'id_localytics'
 
 #
 # Syntax Highlighting
