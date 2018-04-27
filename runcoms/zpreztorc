@@ -42,6 +42,7 @@ zstyle ':prezto:load' pmodule \
   'ruby' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'fzf' \
   'prompt'
 
 #
@@ -232,3 +233,8 @@ zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
+
+#
+# fzf
+#
+zstyle ':prezto:module:fzf' system-key-bindings 'yes'
